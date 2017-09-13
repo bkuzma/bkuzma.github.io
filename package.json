@@ -9,6 +9,9 @@
   },
   "dependencies": {
     "gatsby": "^1.8.11",
-    "gatsby-link": "^1.4.1"
+    "gatsby-link": "^1.4.1",
+    "gatsby-plugin-styled-components": "^1.0.5",
+    "gatsby-plugin-typography": "^1.7.9",
+    "typography-theme-grand-view": "^0.15.10"
   }
 }
