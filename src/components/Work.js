@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import projects from '../data/projects';
 import Project from '../components/Project';
 
 const Wrapper = styled.div`
@@ -8,23 +9,6 @@ const Wrapper = styled.div`
   overflow: auto;
   padding: 0 20px;
 `;
-
-const projects = [
-  {
-    agency: 'R/GA',
-    description: 'blah blah blah',
-    images: [],
-    link: null,
-    title: 'Samsung Rihanna'
-  },
-  {
-    agency: 'Huge',
-    description: 'blah blah blah',
-    images: [],
-    link: null,
-    title: 'Hugeinc.com'
-  }
-];
 
 export default () => (
   <Wrapper id="work">
