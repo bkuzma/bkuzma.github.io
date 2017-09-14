@@ -12,7 +12,9 @@ injectGlobal`
   }
 `;
 
-var scroll = new SmoothScroll('a[href*="#"]');
+var scroll = new SmoothScroll('a[href*="#"]', {
+  easing: 'easeOutQuad'
+});
 
 export default () => {
 
