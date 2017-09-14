@@ -1,4 +1,7 @@
 module.exports = {
+  siteMetadata: {
+    title: 'Brian Kuzma'
+  },
   plugins: [
     {
       resolve: 'gatsby-plugin-typography',
