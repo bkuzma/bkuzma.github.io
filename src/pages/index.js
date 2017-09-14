@@ -1,5 +1,9 @@
 import React from 'react';
 import styled, { injectGlobal } from 'styled-components';
+import SmoothScroll from 'smooth-scroll';
+
+import LandingTile from '../components/LandingTile';
+import Work from '../components/Work';
 
 injectGlobal`
   body {
@@ -8,28 +12,14 @@ injectGlobal`
   }
 `;
 
-const LandingTile = () => {
+var scroll = new SmoothScroll('a[href*="#"]');
 
-  const Wrapper = styled.div`
-    align-items: center;
-    background-color: papayawhip;
-    display: flex;
-    height: 100vh;
-    justify-content: center;
-    padding: 20px;
-  `;
-
-  const Header = styled.h2`
-    margin: 0;
-  `;
+export default () => {
 
   return (
-    <Wrapper>
-      <Header>Brian Kuzma is a Front-End Engineer based in New York.</Header>
-    </Wrapper>
+    <div>
+      <LandingTile />
+      <Work />
+    </div>
   );
 };
-
-export default () => (
-  <LandingTile />
-);
