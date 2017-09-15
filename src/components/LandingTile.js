@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 import Chevron from '../components/Chevron';
 
-export default () => {
+export default ({ onClickScroll }) => {
 
   const Wrapper = styled.div`
     align-items: center;
@@ -18,7 +18,7 @@ export default () => {
     margin: 0;
   `;
 
-  const ChevronContainer = styled.a`
+  const ChevronContainer = styled.div`
     bottom: 40px;
     cursor: pointer;
     fill: #000;
@@ -30,7 +30,7 @@ export default () => {
   return (
     <Wrapper>
       <Header>Brian Kuzma is a Front-End Engineer based in New York.</Header>
-      <ChevronContainer href="#work">
+      <ChevronContainer onClick={onClickScroll}>
         <Chevron />
       </ChevronContainer>
     </Wrapper>
