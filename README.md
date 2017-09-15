@@ -26,7 +26,6 @@ To serve the static build:
 
 Todo:
 
-- render agency in projects
 - update projects copy
 - style projects for desktop
 - animate landing tile's chevron
