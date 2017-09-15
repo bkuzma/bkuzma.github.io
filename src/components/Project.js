@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import { media } from '../utils/media-queries';
+
 export default ({
   agency,
   alignImageRight,
@@ -9,32 +11,62 @@ export default ({
   link,
   title
 }) => {
-  const Wrapper = styled.div`
-    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-    &:last-child {
-      border: none;
-    }
-  `;
-
   const Agency = styled.h5`
     font-weight: normal;
     margin: 1.6875rem 0;
   `;
 
+  const Images = styled.div`
+    ${media.tablet`flex-basis: 50%;`}
+    ${media.desktop`flex-basis: 35%;`}
+  `;
+
+  const Meta = styled.div`
+    ${media.tablet`
+      display: flex;
+      flex-basis: 50%;
+      flex-direction: column;
+      justify-content: center;
+      order: ${alignImageRight ? 0 : 1};
+      padding-left: ${!alignImageRight ? 20 / 16 : 0}rem;
+      padding-right: ${alignImageRight ? 20 / 16 : 0}rem;
+    `}
+    ${media.desktop`flex-basis: 65%;`}
+  `;
+
+  const Title = styled.h4`
+    margin-top: 0;
+  `;
+
+  const Wrapper = styled.div`
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    margin: 0 auto;
+    max-width: 1000px;
+    padding: ${54 / 16}rem 0 0;
+    &:last-child {
+      border: none;
+    }
+    ${media.tablet`display: flex;`}
+  `;
+
   return (
     <Wrapper>
-      <h4>{title}</h4>
-      {agency &&
-        <Agency>
-          <strong>Agency:</strong> {agency}
-        </Agency>
-      }
-      <p>{description}</p>
-      {link &&
-        <a href={link} target="_blank">visit site</a>
-      }
+      <Meta>
+        <Title>{title}</Title>
+        {agency &&
+          <Agency>
+            <strong>Agency:</strong> {agency}
+          </Agency>
+        }
+        <p>{description}</p>
+        {link &&
+          <a href={link} target="_blank">visit site</a>
+        }
+      </Meta>
+      <Images>
       {images && images.map((image, index) => (
         <img src={image.src} key={index} />
       ))}
+      </Images>
   </Wrapper>
 )};

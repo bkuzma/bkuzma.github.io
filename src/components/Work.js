@@ -19,7 +19,7 @@ export default () => (
     <Header>Here are some things I've worked on.</Header>
     <div>
       {projects.map((project, index) => (
-        <Project {...project} key={index} />
+        <Project {...project} key={index} alignImageRight={index % 2 === 0} />
       ))}
     </div>
   </Wrapper>

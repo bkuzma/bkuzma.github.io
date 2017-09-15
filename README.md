@@ -27,6 +27,5 @@ To serve the static build:
 Todo:
 
 - update projects copy
-- style projects for desktop
 - animate landing tile's chevron
 - add contact links
