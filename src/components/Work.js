@@ -12,7 +12,7 @@ const Wrapper = styled.div`
 
 export default () => (
   <Wrapper id="work">
-    <h3>Selected Work</h3>
+    <h3>Here are some things I've worked on.</h3>
     <div>
       {projects.map((project, index) => (
         <Project {...project} key={index} />
