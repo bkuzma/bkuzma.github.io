@@ -1,8 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const Wrapper = styled.div``;
-
 export default ({
   agency,
   description,
@@ -10,7 +8,7 @@ export default ({
   link,
   title
 }) => (
-  <Wrapper>
+  <div>
     <h4>{title}</h4>
     <p>{description}</p>
     {link &&
@@ -19,5 +17,5 @@ export default ({
     {images && images.map(image => (
       <img src={image.src} />
     ))}
-  </Wrapper>
+  </div>
 );
