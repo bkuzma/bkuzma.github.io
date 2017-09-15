@@ -14,8 +14,8 @@ export default ({
     {link &&
       <a href={link} target="_blank">visit site</a>
     }
-    {images && images.map(image => (
-      <img src={image.src} />
+    {images && images.map((image, index) => (
+      <img src={image.src} key={index} />
     ))}
   </div>
 );
