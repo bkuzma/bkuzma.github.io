@@ -1,6 +1,5 @@
 import React from 'react';
 import styled, { injectGlobal } from 'styled-components';
-import SmoothScroll from 'smooth-scroll';
 
 import LandingTile from '../components/LandingTile';
 import Work from '../components/Work';
@@ -11,11 +10,6 @@ injectGlobal`
     padding: 0;
   }
 `;
-
-var scroll = new SmoothScroll('a[href*="#"]', {
-  easing: 'easeInOutQuint',
-  speed: 500,
-});
 
 export default () => {
 
