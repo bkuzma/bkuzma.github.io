@@ -4,6 +4,10 @@ import styled from 'styled-components';
 import projects from '../data/projects';
 import Project from '../components/Project';
 
+const Header = styled.h2`
+  text-align: center;
+`;
+
 const Wrapper = styled.div`
   background-color: lavenderblush;
   overflow: auto;
@@ -12,7 +16,7 @@ const Wrapper = styled.div`
 
 export default () => (
   <Wrapper id="work">
-    <h3>Here are some things I've worked on.</h3>
+    <Header>Here are some things I've worked on.</Header>
     <div>
       {projects.map((project, index) => (
         <Project {...project} key={index} />
