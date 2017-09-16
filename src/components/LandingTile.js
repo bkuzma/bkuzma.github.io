@@ -68,7 +68,7 @@ export default ({ onClickScroll }) => {
         or {emailLink}.
       </p>
       <Arrow onClick={onClickScroll}>
-        ➱&#xFE0E;
+        ➝&#xFE0E;
       </Arrow>
     </Wrapper>
   );
