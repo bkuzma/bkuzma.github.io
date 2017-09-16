@@ -40,10 +40,10 @@ export default ({
   `;
 
   const Wrapper = styled.div`
-    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-    margin: 0 auto;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    margin: ${60 / 16}rem auto 0;
     max-width: 1000px;
-    padding: ${54 / 16}rem 0 0;
+    padding: ${54 / 16}rem 0;
     &:last-child {
       border: none;
     }
