@@ -4,7 +4,12 @@ import styled from 'styled-components';
 import projects from '../data/projects';
 import Project from '../components/Project';
 
-const Header = styled.h3`
+const Header = styled.h1`
+  text-align: center;
+`;
+
+const Subheader = styled.h3`
+  margin-top: 0;
   text-align: center;
 `;
 
@@ -18,7 +23,10 @@ const Wrapper = styled.div`
 
 export default () => (
   <Wrapper id="work">
-    <Header>Here are some things I've worked on.</Header>
+    <Header>✍&#xFE0E;☺&#xFE0E;</Header>
+    <Subheader>
+      Here are some projects I've worked on.
+    </Subheader>
     <div>
       {projects.map((project, index) => (
         <Project {...project} key={index} alignImageRight={index % 2 === 0} />
