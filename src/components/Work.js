@@ -10,8 +10,10 @@ const Header = styled.h3`
 
 const Wrapper = styled.div`
   background-color: whitesmoke;
+  margin: 100vh 0 0;
   overflow: auto;
   padding: 0 20px;
+  position: relative;
 `;
 
 export default () => (

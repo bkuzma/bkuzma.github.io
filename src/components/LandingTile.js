@@ -28,8 +28,12 @@ export default ({ onClickScroll }) => {
     flex-direction: column;
     height: 100vh;
     justify-content: center;
+    left: 0;
     padding: 20px;
+    position: fixed;
+    right: 0;
     text-align: center;
+    top: 0;
   `;
 
   const emailLink =
