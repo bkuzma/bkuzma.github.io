@@ -4,7 +4,7 @@ import styled from 'styled-components';
 export default ({ onClickScroll }) => {
 
   const Arrow = styled.div`
-    bottom: 40px;
+    bottom: 50px;
     cursor: pointer;
     fill: #000;
     font-size: ${30 / 16}rem;
