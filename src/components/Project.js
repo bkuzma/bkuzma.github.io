@@ -17,6 +17,7 @@ export default ({
   `;
 
   const Images = styled.div`
+    text-align: center;
     ${media.tablet`flex-basis: 50%;`}
     ${media.desktop`flex-basis: 35%;`}
   `;
