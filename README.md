@@ -26,6 +26,5 @@ To serve the static build:
 
 Todo:
 
-- update projects copy
 - animate landing tile's chevron
-- add contact links
+- add footer with "built with Gatsby"
