@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import projects from '../data/projects';
 import Project from '../components/Project';
 
-const Header = styled.h2`
+const Header = styled.h3`
   text-align: center;
 `;
 
