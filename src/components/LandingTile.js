@@ -13,6 +13,14 @@ export default ({ onClickScroll }) => {
     transform: translateX(-50%) rotate(90deg);
   `;
 
+  const Header = styled.h1`
+    margin-top: 0;
+  `;
+
+  const Subheader = styled.h2`
+    margin: 0;
+  `;
+
   const Wrapper = styled.div`
     align-items: center;
     background-color: papayawhip;
@@ -23,14 +31,10 @@ export default ({ onClickScroll }) => {
     padding: 20px;
   `;
 
-  const Header = styled.h2`
-    margin: 0;
-  `;
-
   return (
     <Wrapper>
-      <h1>✌&#xFE0E; ☺&#xFE0E;</h1>
-      <Header>I'm a Front-End Web Engineer based in New York.</Header>
+      <Header>✌&#xFE0E; ☺&#xFE0E;</Header>
+      <Subheader>I'm a Front-End Web Engineer based in New York.</Subheader>
       <Arrow onClick={onClickScroll}>
         ➱&#xFE0E;
       </Arrow>
