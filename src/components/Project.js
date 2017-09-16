@@ -18,21 +18,21 @@ export default ({
 
   const Images = styled.div`
     text-align: center;
-    ${media.tablet`flex-basis: 50%;`}
-    ${media.desktop`flex-basis: 35%;`}
+    ${media.tablet`flex: 0 1 50%;`}
+    ${media.desktop`flex-basis: 40%;`}
   `;
 
   const Meta = styled.div`
     ${media.tablet`
       display: flex;
-      flex-basis: 50%;
+      flex: 0 1 50%;
       flex-direction: column;
       justify-content: center;
       order: ${alignImageRight ? 0 : 1};
       padding-left: ${!alignImageRight ? 20 / 16 : 0}rem;
       padding-right: ${alignImageRight ? 20 / 16 : 0}rem;
     `}
-    ${media.desktop`flex-basis: 65%;`}
+    ${media.desktop`flex-basis: 60%;`}
   `;
 
   const Title = styled.h4`

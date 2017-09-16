@@ -37,6 +37,10 @@ injectGlobal`
     line-height: 1.6;
     margin: 0 0 ${27 / 16}rem;
   }
+  img {
+    height: auto;
+    max-width: 100%;
+  }
 `;
 
 export default () => {
