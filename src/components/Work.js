@@ -9,7 +9,7 @@ const Header = styled.h3`
 `;
 
 const Wrapper = styled.div`
-  background-color: lavenderblush;
+  background-color: whitesmoke;
   overflow: auto;
   padding: 0 20px;
 `;

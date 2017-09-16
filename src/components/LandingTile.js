@@ -23,7 +23,7 @@ export default ({ onClickScroll }) => {
 
   const Wrapper = styled.div`
     align-items: center;
-    background-color: papayawhip;
+    background-color: lightsteelblue;
     display: flex;
     flex-direction: column;
     height: 100vh;
