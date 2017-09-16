@@ -13,7 +13,7 @@ export default ({
 }) => {
   const Agency = styled.h5`
     font-weight: normal;
-    margin: 1.6875rem 0;
+    margin: 0 0 1.6875rem;
   `;
 
   const Images = styled.div`
