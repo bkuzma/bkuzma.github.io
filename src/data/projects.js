@@ -2,7 +2,6 @@ import antidiary from '../images/antidiary-1.png';
 import biteMe from '../images/bite-me-1.png';
 import destroyer from '../images/destroyer-1.png';
 import diplo from '../images/diplo-1.png';
-import fanmail from '../images/fanmail-1.png';
 import kswiss from '../images/kswiss-1.png';
 
 export default [
