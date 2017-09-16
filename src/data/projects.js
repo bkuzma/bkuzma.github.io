@@ -31,18 +31,7 @@ export default [
     year: 2015,
   },
   {
-    agency: 'NoFavorite',
-    description: 'I did all front end development for the Fanmail e-commerce site. Fully responsive.',
-    images: [
-      {
-        src: fanmail,
-      },
-    ],
-    title: 'Fanmail',
-    year: 2013,
-  },
-  {
-    description: 'I wrote all grid touch interaction for Destroyer, an iPhone app by The Strange Agency that lets you rearrange and manipulate sound loops.',
+    description: 'Destroyer is an iPhone app from The Strange Agency that lets you rearrange and manipulate sound loops. I built the interactive grid UI in Objective-C, which interfaced with the app\'s audio engine and allowed the user to rearrange and toggle tiles, thereby changing the structure of a sound loop in real-time',
     images: [
       {
         src: destroyer,
@@ -52,7 +41,7 @@ export default [
     year: 2012,
   },
   {
-    description: 'I did all front end development for a previous version of K-Swiss’s website.',
+    description: 'I built out the entire front-end for a past version of K-Swiss’s website. The project had a Kohana backend, which consumed product content from a Magento API and rendered the pages. I built an interactive shoe search tool as well as a shoe viewer with magnified and 360 views.',
     images: [
       {
         src: kswiss,
@@ -62,7 +51,7 @@ export default [
     year: 2011,
   },
   {
-    description: 'I did all development for Bite Me, an iPad game available for free in the iTunes app store. Written in Objective-C.',
+    description: 'When I was learning Objective-C, I wrote an iPad game called Bite Me, available for free in the iTunes app store. The game required the user to keep their fingers on creatures that would pop up in random areas on the screen and sometimes move about, turning it into a sort of twister for your fingers.',
     images: [
       {
         src: biteMe,
