@@ -3,6 +3,7 @@ import styled, { injectGlobal } from 'styled-components';
 import { scroller } from 'react-scroll';
 import { Helmet } from 'react-helmet';
 
+import Footer from '../components/Footer';
 import LandingTile from '../components/LandingTile';
 import Work from '../components/Work';
 
@@ -76,6 +77,7 @@ export default () => {
       </Helmet>
       <LandingTile onClickScroll={onClickScroll} />
       <Work />
+      <Footer />
     </div>
   );
 };

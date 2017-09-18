@@ -27,4 +27,4 @@ To serve the static build:
 Todo:
 
 - animate landing tile's chevron
-- add footer with "built with Gatsby"
+- refactor so padding is DRY
