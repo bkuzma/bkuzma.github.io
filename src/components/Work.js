@@ -16,11 +16,13 @@ const Subheader = styled.h3`
 
 const Wrapper = styled.div`
   background-color: whitesmoke;
-  margin: 100vh 0 0;
   overflow: auto;
   padding: 0 ${20 / 16}rem;
   position: relative;
-  ${media.tablet`padding: 0 ${40 / 16}rem;`}
+  ${media.tablet`
+    margin: 100vh 0 0;
+    padding: 0 ${40 / 16}rem;
+  `}
 `;
 
 export default () => (

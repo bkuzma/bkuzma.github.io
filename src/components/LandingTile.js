@@ -1,10 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import { media } from '../utils/media-queries';
+
 export default ({ onClickScroll }) => {
 
   const Arrow = styled.div`
-    bottom: 50px;
+    bottom: 10px;
     cursor: pointer;
     fill: #000;
     font-size: ${30 / 16}rem;
@@ -24,16 +26,19 @@ export default ({ onClickScroll }) => {
   const Wrapper = styled.div`
     align-items: center;
     background-color: lightsteelblue;
+    box-sizing: border-box;
     display: flex;
     flex-direction: column;
     height: 100vh;
     justify-content: center;
-    left: 0;
     padding: 20px;
-    position: fixed;
-    right: 0;
     text-align: center;
-    top: 0;
+    ${media.tablet`
+      left: 0;
+      position: fixed;
+      right: 0;
+      top: 0;
+    `}
   `;
 
   const emailLink =
@@ -61,7 +66,7 @@ export default ({ onClickScroll }) => {
     <Wrapper>
       <Header>✌&#xFE0E; ☺&#xFE0E;</Header>
       <Subheader>
-        Hi, I'm a Front-End Web Engineer based in New York.
+        Hi,I'm a Front-End Web Engineer based in New York.
       </Subheader>
       <p>
         I build web applications using technologies like
