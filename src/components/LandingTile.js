@@ -66,7 +66,7 @@ export default ({ onClickScroll }) => {
     <Wrapper>
       <Header>✌&#xFE0E; ☺&#xFE0E;</Header>
       <Subheader>
-        Hi,I'm a Front-End Web Engineer based in New York.
+        Hi, I'm a Front-End Web Engineer based in New York.
       </Subheader>
       <p>
         I build web applications using technologies like
