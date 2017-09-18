@@ -2,14 +2,12 @@ import React from 'react';
 import styled from 'styled-components';
 
 import { media } from '../utils/media-queries';
+import Container from './Container';
 
-const Wrapper = styled.div`
+const Wrapper = Container.extend`
   background-color: whitesmoke;
-  padding: ${20 / 16}rem;
-  position: relative;
-  ${media.tablet`
-    padding: ${40 / 16}rem;
-  `}
+  padding-bottom: ${30 / 16}rem;
+  padding-top: ${30 / 16}rem;
 `;
 
 export default () => (

@@ -27,4 +27,3 @@ To serve the static build:
 Todo:
 
 - animate landing tile's chevron
-- refactor so padding is DRY

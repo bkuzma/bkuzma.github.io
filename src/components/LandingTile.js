@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import Container from './Container';
 import { media } from '../utils/media-queries';
 import contact from '../data/contact';
 
@@ -24,7 +25,7 @@ export default ({ onClickScroll }) => {
     margin-top: 0;
   `;
 
-  const Wrapper = styled.div`
+  const Wrapper = Container.extend`
     align-items: center;
     background-color: lightsteelblue;
     box-sizing: border-box;
@@ -32,7 +33,6 @@ export default ({ onClickScroll }) => {
     flex-direction: column;
     height: 100vh;
     justify-content: center;
-    padding: 20px;
     text-align: center;
     ${media.tablet`
       left: 0;

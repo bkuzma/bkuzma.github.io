@@ -3,6 +3,7 @@ import styled from 'styled-components';
 
 import projects from '../data/projects';
 import Project from '../components/Project';
+import Container from '../components/Container';
 import { media } from '../utils/media-queries';
 
 const Header = styled.h1`
@@ -14,14 +15,11 @@ const Subheader = styled.h3`
   text-align: center;
 `;
 
-const Wrapper = styled.div`
+const Wrapper = Container.extend`
   background-color: whitesmoke;
   overflow: auto;
-  padding: 0 ${20 / 16}rem;
-  position: relative;
   ${media.tablet`
     margin: 100vh 0 0;
-    padding: 0 ${40 / 16}rem;
   `}
 `;
 
