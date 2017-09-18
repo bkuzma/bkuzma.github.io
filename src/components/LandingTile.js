@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import { media } from '../utils/media-queries';
+import contact from '../data/contact';
 
 export default ({ onClickScroll }) => {
 
@@ -41,25 +42,31 @@ export default ({ onClickScroll }) => {
     `}
   `;
 
+  const {
+    email,
+    gitHub,
+    linkedIn,
+  } = contact;
+
   const emailLink =
     <a
-      href="mailto:hello@briankuzma.com"
+      href={email.url}
       target="_blank">
-      email
+      {email.label}
     </a>;
 
   const linkedInLink =
     <a
-      href="https://www.linkedin.com/in/briankuzma/"
+      href={linkedIn.url}
       target="_blank">
-      LinkedIn
+      {linkedIn.label}
     </a>;
 
   const gitHubLink =
     <a
-      href="https://github.com/bkuzma"
+      href={gitHub.url}
       target="_blank">
-      GitHub
+      {gitHub.label}
     </a>;
 
   return (
