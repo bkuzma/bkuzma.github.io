@@ -44,9 +44,6 @@ export default ({
     margin: ${60 / 16}rem auto 0;
     max-width: 1000px;
     padding: ${54 / 16}rem 0;
-    &:last-child {
-      border: none;
-    }
     ${media.tablet`display: flex;`}
   `;
 
