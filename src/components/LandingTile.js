@@ -2,6 +2,7 @@ import React from 'react';
 import styled, { keyframes } from 'styled-components';
 
 import Container from './Container';
+import ExternalLink from './ExternalLink';
 import { media } from '../utils/media-queries';
 import contact from '../data/contact';
 
@@ -91,6 +92,10 @@ export default class LandingTile extends React.Component {
     });
   }
 
+  renderLink(link) {
+    return <ExternalLink {...link} />;
+  }
+
   render() {
     const { onClickScroll } = this.props;
     const { isHeaderHovered } = this.state;
@@ -100,27 +105,6 @@ export default class LandingTile extends React.Component {
       gitHub,
       linkedIn,
     } = contact;
-
-    const emailLink =
-      <a
-        href={email.url}
-        target="_blank">
-        {email.label}
-      </a>;
-
-    const linkedInLink =
-      <a
-        href={linkedIn.url}
-        target="_blank">
-        {linkedIn.label}
-      </a>;
-
-    const gitHubLink =
-      <a
-        href={gitHub.url}
-        target="_blank">
-        {gitHub.label}
-      </a>;
 
     return (
       <Wrapper>
@@ -141,8 +125,8 @@ export default class LandingTile extends React.Component {
           React, Redux, ES7, Webpack, and more.
         </p>
         <p>
-          Find me on {linkedInLink}, {gitHubLink},
-          or {emailLink}, or scroll down to see some recent work.
+          Find me on {this.renderLink(linkedIn)}, {this.renderLink(gitHub)}, or {this.renderLink(email)},
+          or scroll down to see some recent work.
         </p>
         <Arrow onClick={onClickScroll}>
           ➝&#xFE0E;
