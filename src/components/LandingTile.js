@@ -28,6 +28,12 @@ const Arrow = styled.div`
   transform: translateX(-50%) rotate(90deg);
 `;
 
+const Content = styled.div`
+  ${media.tablet`
+    transform: translateY(${props => props.translateAmount}px);
+  `}
+`;
+
 const Hand = styled.span`
   display: inline-block;
   transform: rotate(0deg);
@@ -69,15 +75,24 @@ export default class LandingTile extends React.Component {
 
     this.state = {
       isHeaderHovered: false,
+      translateAmount: 0,
     };
 
     this.onHeaderMouseOver = this.onHeaderMouseOver.bind(this);
     this.onHeaderMouseOut = this.onHeaderMouseOut.bind(this);
+    this.onScroll = this.onScroll.bind(this);
   }
 
   componentDidMount() {
     setTimeout(() => this.setState({ isHeaderHovered: true }), 1000);
     setTimeout(() => this.setState({ isHeaderHovered: false }), 2200);
+
+    window.addEventListener('scroll', this.onScroll);
+  }
+
+  shouldComponentUpdate(nextProps, nextState) {
+    return this.state.isHeaderHovered != nextState.isHeaderHovered |
+      this.state.translateAmount != nextState.translateAmount;
   }
 
   onHeaderMouseOver() {
@@ -92,13 +107,18 @@ export default class LandingTile extends React.Component {
     });
   }
 
+  onScroll() {
+    const translateAmount = window.scrollY * -0.6;
+    this.setState({ translateAmount });
+  }
+
   renderLink(link) {
     return <ExternalLink {...link} />;
   }
 
   render() {
     const { onClickScroll } = this.props;
-    const { isHeaderHovered } = this.state;
+    const { isHeaderHovered, translateAmount } = this.state;
 
     const {
       email,
@@ -108,26 +128,28 @@ export default class LandingTile extends React.Component {
 
     return (
       <Wrapper>
-        <Header
-          onMouseEnter={this.onHeaderMouseOver}
-          onMouseLeave={this.onHeaderMouseOut}
-        >
-          <Hand isHovered={isHeaderHovered}>
-            ✌&#xFE0E;
-          </Hand>
-          ☺&#xFE0E;
-        </Header>
-        <Subheader>
-          Hi, I'm a Front-End Web Engineer based in New York.
-        </Subheader>
-        <p>
-          I build web applications using technologies like
-          React, Redux, ES7, Webpack, and more.
-        </p>
-        <p>
-          Find me on {this.renderLink(linkedIn)}, {this.renderLink(gitHub)}, or {this.renderLink(email)},
-          or scroll down to see some recent work.
-        </p>
+        <Content translateAmount={translateAmount}>
+          <Header
+            onMouseEnter={this.onHeaderMouseOver}
+            onMouseLeave={this.onHeaderMouseOut}
+          >
+            <Hand isHovered={isHeaderHovered}>
+              ✌&#xFE0E;
+            </Hand>
+            ☺&#xFE0E;
+          </Header>
+          <Subheader>
+            Hi, I'm a Front-End Web Engineer based in New York.
+          </Subheader>
+          <p>
+            I build web applications using technologies like
+            React, Redux, ES7, Webpack, and more.
+          </p>
+          <p>
+            Find me on {this.renderLink(linkedIn)}, {this.renderLink(gitHub)}, or {this.renderLink(email)},
+            or scroll down to see some recent work.
+          </p>
+        </Content>
         <Arrow onClick={onClickScroll}>
           ➝&#xFE0E;
         </Arrow>
