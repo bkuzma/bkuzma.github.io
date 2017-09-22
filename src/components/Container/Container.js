@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { media } from '../utils/media-queries';
+import { media } from '../../utils/media-queries';
 
 export default styled.div`
   padding-left: ${20 / 16}rem;
