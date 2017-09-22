@@ -22,8 +22,3 @@ To serve the static build:
 `npm run serve`
 
 **Note: *develop* is the main branch of development. Anything committed to *master* will be overwritten in the deployment process, since Github pages require that *master* be used for an organization page.** 
-
-
-Todo:
-
-- animate landing tile's chevron
