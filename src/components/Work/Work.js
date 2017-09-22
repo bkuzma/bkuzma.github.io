@@ -1,5 +1,10 @@
 import React from 'react';
 
+import {
+  Header,
+  Subheader,
+  Wrapper,
+} from './styled';
 import projects from '../../data/projects';
 import Project from '../Project';
 

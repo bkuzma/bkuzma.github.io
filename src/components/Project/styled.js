@@ -19,9 +19,9 @@ export const Meta = styled.div`
     flex: 0 1 50%;
     flex-direction: column;
     justify-content: center;
-    order: ${alignImageRight ? 0 : 1};
-    padding-left: ${!alignImageRight ? 20 / 16 : 0}rem;
-    padding-right: ${alignImageRight ? 20 / 16 : 0}rem;
+    order: ${props => props.alignImageRight ? 0 : 1};
+    padding-left: ${props => !props.alignImageRight ? 20 / 16 : 0}rem;
+    padding-right: ${props => props.alignImageRight ? 20 / 16 : 0}rem;
   `}
   ${media.desktop`flex-basis: 60%;`}
 `;

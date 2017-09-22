@@ -1,6 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import {
+  Agency,
+  Images,
+  Meta,
+  Title,
+  Wrapper,
+} from './styled';
 import { media } from '../../utils/media-queries';
 
 export default ({
