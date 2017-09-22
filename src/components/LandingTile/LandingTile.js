@@ -70,7 +70,7 @@ export default class LandingTile extends React.Component {
         </Subheader>
         <p>
           I build web applications using technologies like
-          React, Redux, ES7, Webpack, and more.
+          React, Redux, ES6, Webpack, and more.
         </p>
         <p>
           Find me on {this.renderLink(linkedIn)}, {this.renderLink(gitHub)}, or {this.renderLink(email)},
