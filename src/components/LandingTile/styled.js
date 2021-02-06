@@ -42,7 +42,7 @@ export const Subheader = styled.h3`
   margin-top: 0;
 `;
 
-export const Wrapper = Container.extend`
+export const Wrapper = styled(Container)`
   align-items: center;
   background-color: lightsteelblue;
   box-sizing: border-box;

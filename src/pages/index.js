@@ -1,5 +1,5 @@
 import React from 'react';
-import styled, { injectGlobal } from 'styled-components';
+import { createGlobalStyle } from 'styled-components';
 import { scroller } from 'react-scroll';
 import { Helmet } from 'react-helmet';
 
@@ -7,7 +7,7 @@ import Footer from '../components/Footer';
 import LandingTile from '../components/LandingTile';
 import Work from '../components/Work';
 
-injectGlobal`
+const GlobalStyle = createGlobalStyle`
   body {
     margin: 0;
     padding: 0;
@@ -45,7 +45,7 @@ injectGlobal`
   }
 `;
 
-export default () => {
+const Page = () => {
 
   const onClickScroll = function () {
     scroller.scrollTo('work', {
@@ -75,9 +75,12 @@ export default () => {
         <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
         <meta name="theme-color" content="#ffffff" />
       </Helmet>
+      <GlobalStyle />
       <LandingTile onClickScroll={onClickScroll} />
       <Work />
       <Footer />
     </div>
   );
 };
+
+export default Page;

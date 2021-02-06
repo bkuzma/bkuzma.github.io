@@ -12,7 +12,7 @@ export const Subheader = styled.h3`
   text-align: center;
 `;
 
-export const Wrapper = Container.extend`
+export const Wrapper = styled(Container)`
   background-color: whitesmoke;
   overflow: auto;
   ${media.tablet`

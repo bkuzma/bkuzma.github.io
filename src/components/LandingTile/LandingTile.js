@@ -61,9 +61,9 @@ export default class LandingTile extends React.Component {
           onMouseLeave={this.onHeaderMouseOut}
         >
           <Hand isHovered={isHeaderHovered}>
-            ✌&#xFE0E;
+          <span role="img" aria-label="Hand with peace sign">✌</span>&#xFE0E;
           </Hand>
-          ☺&#xFE0E;
+          <span role="img" aria-label="Smiley face">☺</span>&#xFE0E;
         </Header>
         <Subheader>
           Hi, I'm a Front-End Web Engineer based in New York.
@@ -77,7 +77,7 @@ export default class LandingTile extends React.Component {
           or scroll down to see some recent work.
         </p>
         <Arrow onClick={onClickScroll}>
-          ➝&#xFE0E;
+        <span role="img" aria-label="Arrow down">➝</span>&#xFE0E;
         </Arrow>
       </Wrapper>
     );

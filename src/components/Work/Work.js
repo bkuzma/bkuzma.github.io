@@ -10,7 +10,10 @@ import Project from '../Project';
 
 export default () => (
   <Wrapper id="work">
-    <Header>✍&#xFE0E;☺&#xFE0E;</Header>
+    <Header>
+      <span role="img" aria-label="Hand writing with pen">✍</span>&#xFE0E;
+      <span role="img" aria-label="Smiley face">☺</span>&#xFE0E;
+    </Header>
     <Subheader>
       Here are some projects I've worked on.
     </Subheader>

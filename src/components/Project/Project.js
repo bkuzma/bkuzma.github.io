@@ -1,5 +1,4 @@
 import React from 'react';
-import styled from 'styled-components';
 
 import {
   Agency,
@@ -8,7 +7,6 @@ import {
   Title,
   Wrapper,
 } from './styled';
-import { media } from '../../utils/media-queries';
 
 export default ({
   agency,
@@ -28,12 +26,12 @@ export default ({
         }
         <p>{description}</p>
         {link &&
-          <a href={link} target="_blank">visit site</a>
+          <a href={link} target="_blank" rel="noreferrer">visit site</a>
         }
       </Meta>
       <Images>
       {images && images.map((image, index) => (
-        <img src={image.src} key={index} />
+        <img alt="Project Screenshot" src={image.src} key={index} />
       ))}
       </Images>
   </Wrapper>
