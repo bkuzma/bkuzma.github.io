@@ -66,11 +66,11 @@ export default class LandingTile extends React.Component {
           <span role="img" aria-label="Smiley face">☺</span>&#xFE0E;
         </Header>
         <Subheader>
-          Hi, I'm a Front-End Web Engineer based in New York.
+          Hi, I'm a Front-End Web Engineer based in Stavanger, Norway.
         </Subheader>
         <p>
-          I build web applications using technologies like
-          React, Redux, ES6, Webpack, and more.
+          I build web applications using tools like
+          React, Vue and plain old JavaScript.
         </p>
         <p>
           Find me on {this.renderLink(linkedIn)}, {this.renderLink(gitHub)}, or {this.renderLink(email)},
