@@ -1,11 +1,8 @@
 import React from 'react';
 import { createGlobalStyle } from 'styled-components';
-import { scroller } from 'react-scroll';
 import { Helmet } from 'react-helmet';
 
-import Footer from '../components/Footer';
 import LandingTile from '../components/LandingTile';
-import Work from '../components/Work';
 
 const GlobalStyle = createGlobalStyle`
   body {
@@ -47,13 +44,6 @@ const GlobalStyle = createGlobalStyle`
 
 const Page = () => {
 
-  const onClickScroll = function () {
-    scroller.scrollTo('work', {
-      duration: 600,
-      smooth: 'easeInOutQuint',
-    });
-  };
-
   return (
     <div>
       <Helmet>
@@ -76,9 +66,7 @@ const Page = () => {
         <meta name="theme-color" content="#ffffff" />
       </Helmet>
       <GlobalStyle />
-      <LandingTile onClickScroll={onClickScroll} />
-      <Work />
-      <Footer />
+      <LandingTile />
     </div>
   );
 };

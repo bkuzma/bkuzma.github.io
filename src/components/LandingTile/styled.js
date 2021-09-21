@@ -1,29 +1,7 @@
-import styled, { keyframes } from 'styled-components';
+import styled from 'styled-components';
 
 import Container from '../Container';
 import { media } from '../../utils/media-queries';
-
-const downUpAnimation = keyframes`
-  0% {
-    bottom: 10px;
-  }
-  50% {
-    bottom: 0;
-  }
-  100% {
-    bottom: 10px;
-  }
-`;
-
-export const Arrow = styled.div`
-  animation: ${downUpAnimation} 0.6s 5s 4;
-  bottom: 10px;
-  cursor: pointer;
-  font-size: ${30 / 16}rem;
-  left: 50%;
-  position: absolute;
-  transform: translateX(-50%) rotate(90deg);
-`;
 
 export const Hand = styled.span`
   display: inline-block;

@@ -1,7 +1,6 @@
 import React from 'react';
 
 import {
-  Arrow,
   Hand,
   Header,
   Subheader,
@@ -45,7 +44,6 @@ export default class LandingTile extends React.Component {
   }
 
   render() {
-    const { onClickScroll } = this.props;
     const { isHeaderHovered } = this.state;
 
     const {
@@ -70,15 +68,11 @@ export default class LandingTile extends React.Component {
         </Subheader>
         <p>
           I build web applications using tools like
-          React, Vue and plain old JavaScript.
+          React, Vue and plain JavaScript.
         </p>
         <p>
-          Find me on {this.renderLink(linkedIn)}, {this.renderLink(gitHub)}, or {this.renderLink(email)},
-          or scroll down to see some recent work.
+          Find me on {this.renderLink(linkedIn)}, {this.renderLink(gitHub)} or {this.renderLink(email)}.
         </p>
-        <Arrow onClick={onClickScroll}>
-        <span role="img" aria-label="Arrow down">➝</span>&#xFE0E;
-        </Arrow>
       </Wrapper>
     );
   }
